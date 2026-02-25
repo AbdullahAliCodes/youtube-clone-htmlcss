@@ -17,6 +17,17 @@ main {
     display: flex;
 }
 
+.menu-sidebar-section {
+    padding: 12px;
+    width: 216px;
+    height: fit-content;
+}
+.menu-sidebar-item {
+    height: 40px;
+    width: 204px;
+    background-color: lightblue;
+}
+
 .menu-sidebar {
     width: 240px;
     height: 100%;
