@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+body {
+    font-family: Roboto, Noto, sans-serif;
+}
+
 /*  NAV BAR STYLING */
 nav {
     height: 56px;
@@ -23,7 +27,8 @@ main {
 .menu-sidebar-section {
     padding: 12px;
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 .menu-sidebar-item {
     height: 40px;
@@ -31,7 +36,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Roboto, Noto, sans-serif;
     font-weight: 400;
 }
 .sb-item-content {
@@ -47,16 +51,65 @@ main {
     height: 24px;
     width: 24px;
 }
+
+/* Menu Headings */
+.sb-menu-header {
+    padding-right: 8px;
+    color: rgb(15, 15, 15);
+    font-size: 16px;
+    font-weight: 500;
+}
+.sb-menu-header-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Menu Headings Bottom */
+.sb-menu-header-bottom {
+    width: 192px;
+    height: 22px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 12px 0 0;
+}
+
+/* Subscription Section */
 .subs-profile-img {
     width: 24px;
     border-radius: 50%;
 }
-
 .menu-sidebar {
     width: 240px;
     height: 100%;
     display: flex;
     flex-direction: column; 
+}
+
+/* Footer Section */
+footer {
+    width: 100%;
+}
+.footer-top {
+    padding: 16px 24px 0 24px;
+    line-height: 18px;
+}
+.footer-bottom{
+    padding: 12px 24px 0px 24px;
+    line-height: 18px;
+}
+.footer-links {
+    font-size: 13px;
+    font-weight: 500;
+    color: rgb(96, 96, 96);
+    text-decoration: none;
+    margin-right: 8px;
+    cursor: pointer;
+}
+/* Copyright in Footer */
+.copyright {
+    padding: 16px 24px;
+    font-size: 12px;
+    color: rgb(144, 144, 144);
 }
 
 .seperator-section {
