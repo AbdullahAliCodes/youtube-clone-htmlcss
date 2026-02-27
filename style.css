@@ -103,8 +103,11 @@ footer {
     color: rgb(96, 96, 96);
     text-decoration: none;
     margin-right: 8px;
+}
+.footer-links:hover {
     cursor: pointer;
 }
+
 /* Copyright in Footer */
 .copyright {
     padding: 16px 24px;
