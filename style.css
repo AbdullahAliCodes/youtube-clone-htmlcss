@@ -121,8 +121,38 @@ footer {
     background-color: pink;
 }
 
+
+/* MAIN VIDEO SECTION */
 .main-area-right {
     background-color: yellow;
     width: calc(100vw - 240px);
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    height: 56px;
+}
+
+.category-btns button {
+    background-color: #d3d3d3;
+    color: #0d0d0d;
+    height: 32px;
+    padding: 0 12px;
+    margin: 12px 12px 12px 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.category-btn-active {
+    background-color: #0d0d0d;
+    color: #dfdfdf;
+}
+
