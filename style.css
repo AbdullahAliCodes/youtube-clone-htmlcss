@@ -13,7 +13,43 @@ body {
 nav {
     height: 56px;
     width: 100%;
-    background-color: red;
+    background-color: pink;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-menu-left {
+    display: flex;
+}
+.burger-menu-icon-container {
+    height: 100%;
+}
+.burger-menu-icon {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+}
+.yt-logo-large-container {
+    padding: 18px 14px 18px 16px;
+    width: 101px;
+    height: 20px;
+    background-color: #0d0d0d;
+}
+
+/* SEARCH AREA */
+.search-area {
+    background-color: black;
+    height: 40px;
+    width: 732px;
+    height: 40px;
+}
+
+.search-bar {
+    padding: 0 4px;
+    margin-left: 40px;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 /* MAIN AREA */
