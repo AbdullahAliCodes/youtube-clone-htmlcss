@@ -7,6 +7,7 @@
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=home" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 
     <title>YouTube</title>
 </head>
@@ -23,8 +24,9 @@
     <!-- Main Area -->
     <main>
 
-        <!-- Menu Sidebar -->
+        <!-- Menu Sidebar Large -->
         <section class="menu-sidebar">
+            <!-- HOME / SHORTS SECTION -->
             <section class="menu-sidebar-section home-shorts-section">
                 <div class="menu-sidebar-item">
                     <!-- HOME -->
@@ -356,20 +358,251 @@
             </footer>
         </section>
 
+        <!-- Menu Sidebar Small -->
+        <section class="menu-sidebar-small">
+            <div class="sml-menu-icons">
+                <div class="sml-menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="m11.485 2.143-8 4.8-2 1.2a1 1 0 001.03 1.714L3 9.567V20a2 2 0 002 2h5v-8h4v8h5a2 2 0 002-2V9.567l.485.29a1 1 0 001.03-1.714l-2-1.2-8-4.8a1 1 0 00-1.03 0Z"></path></svg>
+                </div>
+                <div class="sml-menu-text">
+                    Home
+                </div>
+            </div>
+            <div class="sml-menu-icons">
+                <div class="sml-menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="m13.467 1.19-8 4.7a5 5 0 00-.255 8.46 5 5 0 005.32 8.462l8-4.7a5 5 0 00.258-8.462 5 5 0 001.641-6.464l-.12-.217a5 5 0 00-6.844-1.78m5.12 2.79a2.999 2.999 0 01-1.067 4.107l-1.327.78a1 1 0 00.096 1.775l.943.423a3 3 0 01.288 5.323l-8 4.7a3 3 0 01-3.039-5.173l1.327-.78a1 1 0 00-.097-1.775l-.942-.423a3 3 0 01-.288-5.323l8-4.7a3 3 0 014.106 1.066ZM15 12l-5-3v6l5-3Z"></path></svg>
+                </div>
+                <div class="sml-menu-text">
+                    Shorts
+                </div>
+            </div>
+            <div class="sml-menu-icons">
+                <div class="sml-menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M18 1H6a2 2 0 00-2 2h16a2 2 0 00-2-2Zm3 4H3a2 2 0 00-2 2v13a2 2 0 002 2h18a2 2 0 002-2V7a2 2 0 00-2-2ZM3 20V7h18v13H3Zm13-6.5L10 10v7l6-3.5Z"></path></svg>
+                </div>
+                <div class="sml-menu-text">
+                    Subscriptions
+                </div>
+            </div>
+            <div class="sml-menu-icons">
+                <div class="sml-menu-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M12 1C5.925 1 1 5.925 1 12s4.925 11 11 11 11-4.925 11-11S18.075 1 12 1Zm0 2a9 9 0 016.447 15.276 7 7 0 00-12.895 0A9 9 0 0112 3Zm0 2a4 4 0 100 8 4 4 0 000-8Zm0 2a2 2 0 110 4 2 2 0 010-4Zm-.1 9.001L11.899 16a5 5 0 014.904 3.61A8.96 8.96 0 0112 21a8.96 8.96 0 01-4.804-1.391 5 5 0 014.704-3.608Z"></path></svg>
+                </div>
+                <div class="sml-menu-text">
+                    You
+                </div>
+            </div>
+        </section>
+
         <!-- Seperator Section -->
         <div class="seperator-section"></div>
 
         <!-- Video Section -->
         <section class="main-area-right">
+            <!-- Category Section That Scrolls -->
             <section class="scroll-container">
-                <div class="category-btns">
-                    <button class="category-btn-active"><span>All</span></button>
+                <div class="categories">
+                    <div>
+                        <button class="category-btn-active"><span>All</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>Gaming</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>Podcasts</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>Cars</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>Toy Story 2</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>Software Development</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>AI</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>OpTic Gaming</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>3D Printer</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>JavaScript</span></button>
+                    </div>
+                    <div>
+                        <button class="category-btns"><span>Stop Motion</span></button>
+                    </div>
                 </div>
-                <div class="category-btns">
-                    <button><span>Gaming</span></button>
+
+                <!-- Category Arrows (left & right) -->
+                <div class="arrows">
+                    <div class="arrow-container right-arrow-container">
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M8.793 5.293a1 1 0 000 1.414L14.086 12l-5.293 5.293a1 1 0 101.414 1.414L16.914 12l-6.707-6.707a1 1 0 00-1.414 0Z"></path></svg>
+                        </div>
+                    </div>
+                    <div class="arrow-container left-arrow-container">
+                        <div class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" focusable="false" aria-hidden="true" style="pointer-events: none; display: inherit; width: 100%; height: 100%;"><path d="M13.793 5.293 7.086 12l6.707 6.707a1 1 0 101.414-1.414L9.914 12l5.293-5.293a1 1 0 10-1.414-1.414Z"></path></svg>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
+            <!-- YouTube Video Feed Section -->
+            <section class="videos-section">
+                <!-- Video 1 -->
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="./resources/video-thumbnails/yt-thumbnail-1.avif" alt="intro to agent skills">
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-dp">
+                            <img src="./resources/channel-dps/channel-1-dp.jpg" alt="google antigravity">
+                        </div>
+                        <div class="video-info-section">
+                            <div class="video-info-section-left">
+                                <span class="video-title">Intro to Agent Skills</span>
+                                <span class="video-channel">Google Antigravity</span>
+                                <span class="video-views-date">39K view • 1 day ago</span>
+                            </div>
+                            <div class="video-info-section-right">
+                                <img src="./resources/symbols/three-dots-vertical.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 2 -->
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="./resources/video-thumbnails/yt-thumbnail-1.avif" alt="intro to agent skills">
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-dp">
+                            <img src="./resources/channel-dps/channel-1-dp.jpg" alt="google antigravity">
+                        </div>
+                        <div class="video-info-section">
+                            <div class="video-info-section-left">
+                                <span class="video-title">Intro to Agent Skills</span>
+                                <span class="video-channel">Google Antigravity</span>
+                                <span class="video-views-date">39K view • 1 day ago</span>
+                            </div>
+                            <div class="video-info-section-right">
+                                <img src="./resources/symbols/three-dots-vertical.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 3 -->
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="./resources/video-thumbnails/yt-thumbnail-1.avif" alt="intro to agent skills">
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-dp">
+                            <img src="./resources/channel-dps/channel-1-dp.jpg" alt="google antigravity">
+                        </div>
+                        <div class="video-info-section">
+                            <div class="video-info-section-left">
+                                <span class="video-title">Intro to Agent Skills</span>
+                                <span class="video-channel">Google Antigravity</span>
+                                <span class="video-views-date">39K view • 1 day ago</span>
+                            </div>
+                            <div class="video-info-section-right">
+                                <img src="./resources/symbols/three-dots-vertical.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 4 -->
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="./resources/video-thumbnails/yt-thumbnail-1.avif" alt="intro to agent skills">
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-dp">
+                            <img src="./resources/channel-dps/channel-1-dp.jpg" alt="google antigravity">
+                        </div>
+                        <div class="video-info-section">
+                            <div class="video-info-section-left">
+                                <span class="video-title">Intro to Agent Skills</span>
+                                <span class="video-channel">Google Antigravity</span>
+                                <span class="video-views-date">39K view • 1 day ago</span>
+                            </div>
+                            <div class="video-info-section-right">
+                                <img src="./resources/symbols/three-dots-vertical.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 5 -->
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="./resources/video-thumbnails/yt-thumbnail-1.avif" alt="intro to agent skills">
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-dp">
+                            <img src="./resources/channel-dps/channel-1-dp.jpg" alt="google antigravity">
+                        </div>
+                        <div class="video-info-section">
+                            <div class="video-info-section-left">
+                                <span class="video-title">Intro to Agent Skills</span>
+                                <span class="video-channel">Google Antigravity</span>
+                                <span class="video-views-date">39K view • 1 day ago</span>
+                            </div>
+                            <div class="video-info-section-right">
+                                <img src="./resources/symbols/three-dots-vertical.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 6 -->
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="./resources/video-thumbnails/yt-thumbnail-1.avif" alt="intro to agent skills">
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-dp">
+                            <img src="./resources/channel-dps/channel-1-dp.jpg" alt="google antigravity">
+                        </div>
+                        <div class="video-info-section">
+                            <div class="video-info-section-left">
+                                <span class="video-title">Intro to Agent Skills</span>
+                                <span class="video-channel">Google Antigravity</span>
+                                <span class="video-views-date">39K view • 1 day ago</span>
+                            </div>
+                            <div class="video-info-section-right">
+                                <img src="./resources/symbols/three-dots-vertical.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video 7 -->
+                <div class="video">
+                    <div class="video-thumbnail">
+                        <img src="./resources/video-thumbnails/yt-thumbnail-1.avif" alt="intro to agent skills">
+                    </div>
+                    <div class="video-details">
+                        <div class="channel-dp">
+                            <img src="./resources/channel-dps/channel-1-dp.jpg" alt="google antigravity">
+                        </div>
+                        <div class="video-info-section">
+                            <div class="video-info-section-left">
+                                <span class="video-title">Intro to Agent Skills</span>
+                                <span class="video-channel">Google Antigravity</span>
+                                <span class="video-views-date">39K view • 1 day ago</span>
+                            </div>
+                            <div class="video-info-section-right">
+                                <img src="./resources/symbols/three-dots-vertical.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <section class="videos-section"></section>
         </section>
 
     </main>

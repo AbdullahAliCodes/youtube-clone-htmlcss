@@ -1,0 +1,69 @@
+/* 4 videos & full sidebar */
+
+/* 3 videos */
+@media (max-width: 1991px) {
+    .videos-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .menu-sidebar-small {
+        display: none;
+    }
+}
+/* 3 videos and small sidebar */
+@media (max-width: 1312px) {
+    .videos-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .menu-sidebar {
+        display: none;
+    }
+    .menu-sidebar-small {
+        display: flex;
+        flex-direction: column;
+        padding: 4px 4px 0 4px;
+    }
+    .sml-menu-icons{
+        height: 44px;
+        width: 64px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 16px 0 14px 0;
+    }
+    .sml-menu-icon {
+        height: 24px;
+        width: 24px;
+        margin-bottom: 6px;
+    }
+    .sml-menu-text {
+        font-size: 10px;
+        color: rgb(15, 15, 15);
+    }
+}
+/* 2 videos and small sidebar */
+@media (max-width: 960px) {
+    .videos-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 2 videos and NO SIDEBAR */
+@media (max-width: 791px) {
+    .videos-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-sidebar {
+        display: none;
+    }
+    .menu-sidebar-small {
+        display: none;
+    }
+}
+
+/* 1 video, no sidebar, basically mobile */
+@media (max-width: 603px) {
+    .videos-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
