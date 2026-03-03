@@ -231,6 +231,16 @@ main {
     /* padding: 0 12px; */
 }
 
+/* Sidebar toggle checkbox (hidden, sibling of sidebar + main for ~ selector) */
+.sidebar-toggle-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+    margin: 0;
+}
+
 .menu-sidebar {
     width: 240px;
     height: 100%;
@@ -238,6 +248,7 @@ main {
     flex-shrink: 0;
     flex-direction: column;
     overflow-y: auto;
+    transition: width 0.3s ease;
     /* padding-left: 12px; */
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -258,6 +269,34 @@ main {
 .menu-sidebar:hover::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb);
     border-radius: 4px;
+}
+
+/* Collapsed sidebar (checkbox hack): mini width, icons only, main area expands */
+#sidebar-toggle:checked ~ .menu-sidebar {
+    width: 72px;
+}
+#sidebar-toggle:checked ~ .menu-sidebar .menu-sidebar-item {
+    width: 100%;
+}
+#sidebar-toggle:checked ~ .menu-sidebar .sb-item-content {
+    justify-content: center;
+    padding: 0;
+}
+#sidebar-toggle:checked ~ .menu-sidebar .sb-item-content > span {
+    display: none;
+}
+#sidebar-toggle:checked ~ .menu-sidebar .sb-menu-icon {
+    margin-right: 0;
+}
+#sidebar-toggle:checked ~ .menu-sidebar .menu-sidebar-item:has(.sb-menu-header),
+#sidebar-toggle:checked ~ .menu-sidebar .menu-sidebar-item:has(.sb-menu-header-bottom) {
+    display: none;
+}
+#sidebar-toggle:checked ~ .menu-sidebar footer {
+    display: none;
+}
+#sidebar-toggle:checked ~ .menu-sidebar .menu-sidebar-section {
+    padding: 12px 8px;
 }
 
 .menu-sidebar-section {
@@ -380,6 +419,7 @@ footer {
     flex-direction: column;
     overflow-x: hidden;
     overflow-y: auto;
+    transition: margin-left 0.3s ease;
 }
 
 /* TOP SCROLL BAR  */
