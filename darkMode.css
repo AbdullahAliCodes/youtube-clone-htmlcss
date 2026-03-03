@@ -1,0 +1,4 @@
+/* When dark mode is active (e.g. body.dark or [data-theme="dark"]), use this for video card hover */
+body.dark {
+    --video-hover-bg: #272727;
+}
