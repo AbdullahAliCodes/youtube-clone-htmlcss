@@ -7,8 +7,25 @@
 body {
     font-family: Roboto, Noto, sans-serif;
     width: 100vw;
-    color: rgb(15, 15, 15);
+    background: var(--bg);
+    color: var(--text);
+    --bg: #fff;
+    --text: rgb(15, 15, 15);
+    --text-muted: rgb(96, 96, 96);
+    --text-muted-2: rgb(144, 144, 144);
+    --border: rgb(198, 198, 198);
+    --border-subtle: rgba(0, 0, 0, 0.1);
     --video-hover-bg: #e5e5e5;
+    --input-bg: rgb(248, 248, 248);
+    --scroll-bg: #fff;
+    --category-inactive-bg: rgba(0, 0, 0, 0.05);
+    --category-inactive-text: #0d0d0d;
+    --category-active-bg: #0d0d0d;
+    --category-active-text: #dfdfdf;
+    --sidebar-item-hover: rgba(0, 0, 0, 0.05);
+    --arrow-bg: rgb(255, 255, 255);
+    --logo-fill: #0f0f0f;
+    --scrollbar-thumb: rgba(0, 0, 0, 0.2);
 }
 
 /*  NAV BAR STYLING */
@@ -19,6 +36,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: var(--bg);
 }
 
 /* NAVBAR LEFT */
@@ -36,7 +54,7 @@ nav {
     margin: 8px;
 }
 #youtube-paths_yt5 {
-    fill: #0f0f0f; 
+    fill: var(--logo-fill);
 }
 .yt-logo-large-container {
     margin-left: 16px;
@@ -72,24 +90,26 @@ nav {
     padding: 0 4px 0 16px;
     margin-left: 32px;
     border-right: none;
-    border-top: 1px solid rgb(198, 198, 198);
-    border-left: 1px solid rgb(198, 198, 198);
-    border-bottom: 1px solid rgb(198, 198, 198);
+    border-top: 1px solid var(--border);
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     font-size: 16px;
+    background: var(--bg);
+    color: var(--text);
 }
 
 .search-btn-container {
     height: 38px;
     width: 62px;
-    border: 1px solid rgb(198, 198, 198);
+    border: 1px solid var(--border);
     display: flex;
     align-items: center;
     justify-content: center;
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
-    background-color: rgb(248, 248, 248);
+    background-color: var(--input-bg);
 }
 .search-btn {
     width: 24px;
@@ -99,7 +119,7 @@ nav {
     height: 40px;
     width: 40px;
     margin-left: 12px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--category-inactive-bg);
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     border-top-right-radius: 100px;
@@ -121,6 +141,9 @@ nav {
     width: 213px;
     height: 40px;
 }
+.dark-light-mode {
+    margin-right: 16px;
+}
 .create-btn-container {
     width: 97px;
     height: 36px;
@@ -138,7 +161,7 @@ nav {
     border-top-right-radius: 18px;
     border-top-left-radius: 18px;
     padding: 0 16px;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--sidebar-item-hover);
 }
 .create-btn-icon {
     margin-right: 6px;
@@ -179,6 +202,7 @@ main {
     width: 100%;
     display: flex;
     overflow: hidden;
+    padding: 0 12px;
 }
 
 .menu-sidebar {
@@ -188,6 +212,7 @@ main {
     flex-shrink: 0;
     flex-direction: column;
     overflow-y: auto;
+    padding-left: 12px;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
@@ -205,7 +230,7 @@ main {
     background: transparent;
 }
 .menu-sidebar:hover::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--scrollbar-thumb);
     border-radius: 4px;
 }
 
@@ -213,7 +238,7 @@ main {
     padding: 12px;
     width: 100%;
     font-size: 14px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--border-subtle);
 }
 .menu-sidebar-item {
     height: 40px;
@@ -227,7 +252,7 @@ main {
     transition: background-color 0.15s ease-out;
 }
 .menu-sidebar-item:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: var(--sidebar-item-hover);
 }
 .menu-sidebar-item:has(.sb-menu-header),
 .menu-sidebar-item:has(.sb-menu-header-bottom) {
@@ -254,7 +279,7 @@ main {
 /* Menu Headings */
 .sb-menu-header {
     padding-right: 8px;
-    color: rgb(15, 15, 15);
+    color: var(--text);
     font-size: 16px;
     font-weight: 500;
 }
@@ -299,7 +324,7 @@ footer {
 .footer-links {
     font-size: 13px;
     font-weight: 500;
-    color: rgb(96, 96, 96);
+    color: var(--text-muted);
     text-decoration: none;
     margin-right: 8px;
 }
@@ -311,7 +336,7 @@ footer {
 .copyright {
     padding: 16px 24px;
     font-size: 12px;
-    color: rgb(144, 144, 144);
+    color: var(--text-muted-2);
 }
 
 .seperator-section {
@@ -342,7 +367,7 @@ footer {
 .scroll-container {
     height: 100%;
     min-height: 56px;
-    background-color: white;
+    background-color: var(--scroll-bg);
     overflow-x: auto;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -369,7 +394,7 @@ footer {
     position: absolute;
     top: calc((100% - 24px) / 2);
     z-index: 50;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--arrow-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -394,8 +419,8 @@ footer {
 
 /* CATEGORY BUTTONS | TOP SCROLL BAR */
 .category-btn-active {
-    background-color: #0d0d0d;
-    color: #dfdfdf;
+    background-color: var(--category-active-bg);
+    color: var(--category-active-text);
     height: 32px;
     padding: 0 12px;
     margin: 12px 12px 12px 0;
@@ -409,8 +434,8 @@ footer {
     white-space: nowrap;
 }
 .category-btns {
-    background-color: rgba(0, 0, 0, 0.05);
-    color: #0d0d0d;
+    background-color: var(--category-inactive-bg);
+    color: var(--category-inactive-text);
     height: 32px;
     padding: 0 12px;
     margin: 12px 12px 12px 0;
@@ -608,7 +633,7 @@ footer {
     display: flex;
     position: relative;
     flex-direction: column;
-    color: rgb(15, 15, 15);
+    color: var(--text);
 }
 .video-title {
     font-size: 16px;
@@ -621,14 +646,14 @@ footer {
 }
 .video-channel {
     margin-top: 4px;
-    color: rgb(96, 96, 96);
+    color: var(--text-muted);
     font-size: 14px;
     font-weight: 400;
     cursor: pointer;
 }
 .video-views-date {
     margin-top: 3px;
-    color: rgb(96, 96, 96);
+    color: var(--text-muted);
     font-size: 14px;
     font-weight: 400;
     cursor: pointer;

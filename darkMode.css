@@ -1,4 +1,89 @@
-/* When dark mode is active (e.g. body.dark or [data-theme="dark"]), use this for video card hover */
-body.dark {
+body:has(#switch:checked) {
+    --bg: #0f0f0f;
+    --text: #f1f1f1;
+    --text-muted: #aaa;
+    --text-muted-2: #717171;
+    --border: #303030;
+    --border-subtle: rgba(255, 255, 255, 0.1);
     --video-hover-bg: #272727;
+    --input-bg: #121212;
+    --scroll-bg: #0f0f0f;
+    --category-inactive-bg: rgba(255, 255, 255, 0.1);
+    --category-inactive-text: #f1f1f1;
+    --category-active-bg: #f1f1f1;
+    --category-active-text: #0f0f0f;
+    --sidebar-item-hover: rgba(255, 255, 255, 0.1);
+    --arrow-bg: #0f0f0f;
+    --logo-fill: #f1f1f1;
+    --scrollbar-thumb: rgba(255, 255, 255, 0.2);
+}
+
+.dark-light-mode {
+    display: flex;
+    align-items: center;
+}
+
+.theme-label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 8px;
+    color: var(--text);
+}
+
+.theme-label-dark {
+    display: none;
+}
+
+body:has(#switch:checked) .theme-label-light {
+    display: none;
+}
+
+body:has(#switch:checked) .theme-label-dark {
+    display: inline;
+}
+
+.dark-light-mode input#switch {
+    display: none;
+}
+
+.dark-light-mode label {
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    background: #ccc;
+    border-radius: 11px;
+    cursor: pointer;
+    position: relative;
+}
+
+.dark-light-mode label::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s;
+}
+
+body:has(#switch:checked) .dark-light-mode label {
+    background: #3ea6ff;
+}
+
+body:has(#switch:checked) .dark-light-mode label::after {
+    transform: translateX(18px);
+}
+
+body:has(#switch:checked) svg path {
+    fill: #f1f1f1;
+}
+
+body:has(#switch:checked) path[fill="#FF0033"] {
+    fill: #FF0033;
+}
+
+body:has(#switch:checked) path[fill="white"] {
+    fill: white;
 }

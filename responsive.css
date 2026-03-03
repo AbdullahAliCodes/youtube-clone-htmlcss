@@ -35,7 +35,7 @@
         transition: background-color 0.15s ease-out;
     }
     .sml-menu-icons:hover {
-        background-color: rgba(0, 0, 0, 0.05);
+        background-color: var(--sidebar-item-hover);
     }
     .sml-menu-icon {
         height: 24px;
@@ -44,7 +44,7 @@
     }
     .sml-menu-text {
         font-size: 10px;
-        color: rgb(15, 15, 15);
+        color: var(--text);
     }
 }
 /* 2 videos and small sidebar */
