@@ -2,6 +2,12 @@
 
 /* 3 videos */
 @media (max-width: 1991px) {
+    .search-area-middle {
+        margin: 0 24px;
+    }
+    .search-area {
+        max-width: 600px;
+    }
     .videos-section {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -11,6 +17,12 @@
 }
 /* 3 videos and small sidebar */
 @media (max-width: 1312px) {
+    .search-area-middle {
+        margin: 0 16px;
+    }
+    .search-area {
+        max-width: 400px;
+    }
     .videos-section {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -49,6 +61,12 @@
 }
 /* 2 videos and small sidebar */
 @media (max-width: 960px) {
+    .search-area-middle {
+        margin: 0 12px;
+    }
+    .search-area {
+        max-width: 280px;
+    }
     .videos-section {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -56,6 +74,12 @@
 
 /* 2 videos and NO SIDEBAR */
 @media (max-width: 791px) {
+    .search-area-middle {
+        display: none;
+    }
+    nav {
+        padding: 0 12px;
+    }
     .videos-section {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -69,6 +93,9 @@
 
 /* 1 video, no sidebar, basically mobile */
 @media (max-width: 603px) {
+    nav {
+        padding: 0 8px;
+    }
     .videos-section {
         grid-template-columns: repeat(1, 1fr);
     }

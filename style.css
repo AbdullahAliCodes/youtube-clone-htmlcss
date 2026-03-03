@@ -6,7 +6,9 @@
 
 body {
     font-family: Roboto, Noto, sans-serif;
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     background: var(--bg);
     color: var(--text);
     --bg: #fff;
@@ -32,11 +34,13 @@ body {
 nav {
     height: 56px;
     width: 100%;
+    min-width: 0;
     padding: 0 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: var(--bg);
+    box-sizing: border-box;
 }
 
 /* NAVBAR LEFT */
@@ -44,9 +48,12 @@ nav {
 .logo-menu-left {
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    min-width: 0;
 }
 .burger-menu-icon-container {
     height: 100%;
+    cursor: pointer;
 }
 .burger-menu-icon {
     width: 24px;
@@ -62,6 +69,7 @@ nav {
     height: 20px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .country-region {
     width: 12.5px;
@@ -76,16 +84,27 @@ nav {
 .search-area-middle {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    margin: 0 40px;
 }
 .search-area {
     height: 40px;
-    width: 732px;
-    height: 40px;
+    max-width: 732px;
+    width: 100%;
+    min-width: 0;
     display: flex;
     justify-content: flex-end;
 }
+.search-area .input {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+}
 .search-bar-input {
-    width: 515px;
+    width: 100%;
+    max-width: 515px;
     height: 38px;
     padding: 0 4px 0 16px;
     margin-left: 32px;
@@ -98,6 +117,7 @@ nav {
     font-size: 16px;
     background: var(--bg);
     color: var(--text);
+    cursor: pointer;
 }
 
 .search-btn-container {
@@ -110,6 +130,7 @@ nav {
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     background-color: var(--input-bg);
+    cursor: pointer;
 }
 .search-btn {
     width: 24px;
@@ -120,6 +141,7 @@ nav {
     width: 40px;
     margin-left: 12px;
     background-color: var(--category-inactive-bg);
+    cursor: pointer;
     border-bottom-left-radius: 100px;
     border-bottom-right-radius: 100px;
     border-top-right-radius: 100px;
@@ -137,9 +159,10 @@ nav {
 .sign-in-right {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    width: 213px;
+    justify-content: flex-end;
+    flex-shrink: 0;
     height: 40px;
+    gap: 8px;
 }
 .dark-light-mode {
     margin-right: 16px;
@@ -148,6 +171,7 @@ nav {
     width: 97px;
     height: 36px;
     margin-right: 8px;
+    cursor: pointer;
 }
 .create-btn-container button {
     /* width: 100%; */
@@ -176,24 +200,26 @@ nav {
     height: 24px;
     width: 24px;
     margin-right: 8px;
+    cursor: pointer;
 }
 .notifications-icon {
     height: 24px;
     width: 24px;
 }
 .profile {
-    width: 48px;
-    height: 32px;
-    padding: 1px 6px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 .profile img {
-    margin: 0 8px;
-    height: 32px;
     width: 32px;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-right-radius: 50%;
-    border-top-left-radius: 50%;
+    height: 32px;
+    border-radius: 50%;
+    display: block;
 }
 
 /* MAIN AREA */
@@ -202,7 +228,7 @@ main {
     width: 100%;
     display: flex;
     overflow: hidden;
-    padding: 0 12px;
+    /* padding: 0 12px; */
 }
 
 .menu-sidebar {
@@ -212,7 +238,7 @@ main {
     flex-shrink: 0;
     flex-direction: column;
     overflow-y: auto;
-    padding-left: 12px;
+    /* padding-left: 12px; */
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
