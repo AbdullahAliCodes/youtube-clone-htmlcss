@@ -203,6 +203,20 @@ main {
     justify-content: center;
     align-items: center;
     font-weight: 400;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.15s ease-out;
+}
+.menu-sidebar-item:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.menu-sidebar-item:has(.sb-menu-header),
+.menu-sidebar-item:has(.sb-menu-header-bottom) {
+    cursor: default;
+}
+.menu-sidebar-item:has(.sb-menu-header):hover,
+.menu-sidebar-item:has(.sb-menu-header-bottom):hover {
+    background-color: transparent;
 }
 .sb-item-content {
     height: 100%;
@@ -395,6 +409,7 @@ footer {
     margin: 0;
     padding: 8px;
     border-radius: 12px;
+    cursor: pointer;
 }
 .video::before {
     content: '';
@@ -404,7 +419,7 @@ footer {
     background: var(--video-hover-bg);
     transform: scale(0);
     transform-origin: center;
-    transition: transform 0.15s ease-out 0s;
+    transition: transform 0.1s ease-out 0s;
     z-index: -1;
 }
 .video:hover::before {
