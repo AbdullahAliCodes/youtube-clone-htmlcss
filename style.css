@@ -186,8 +186,27 @@ main {
     height: 100%;
     display: flex;
     flex-shrink: 0;
-    flex-direction: column; 
+    flex-direction: column;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.menu-sidebar::-webkit-scrollbar {
+    width: 0;
+}
+.menu-sidebar:hover {
+    scrollbar-width: thin;
+    -ms-overflow-style: auto;
+}
+.menu-sidebar:hover::-webkit-scrollbar {
+    width: 8px;
+}
+.menu-sidebar:hover::-webkit-scrollbar-track {
+    background: transparent;
+}
+.menu-sidebar:hover::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 
 .menu-sidebar-section {
@@ -313,20 +332,34 @@ footer {
 }
 
 /* TOP SCROLL BAR  */
-.scroll-container {
-    height: 56px;
-    background-color: white;
+.categories-bar-wrapper {
     position: relative;
-    z-index: 1;
+    flex-shrink: 0;
+    min-height: 56px;
+    height: 56px;
+    width: 100%;
+}
+.scroll-container {
+    height: 100%;
+    min-height: 56px;
+    background-color: white;
     overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.scroll-container::-webkit-scrollbar {
+    display: none;
 }
 .arrows {
-    height: 100%;
-    width: 100%;
     position: absolute;
-    top: 0px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
 }
 .arrow-container {
+    pointer-events: auto;
     width: 32px;
     height: 32px;
     border-bottom-left-radius: 16px;
@@ -344,10 +377,10 @@ footer {
     margin: 0 12px;
 }
 .right-arrow-container {
-    right: 0px;
+    right: 0;
 }
 .left-arrow-container {
-    left: 0px
+    left: 0;
 }
 .arrow {
     width: 24px;
@@ -355,6 +388,8 @@ footer {
 .categories {
     display: flex;
     align-items: center;
+    padding-left: 12px;
+    min-height: 56px;
 }
 
 /* CATEGORY BUTTONS | TOP SCROLL BAR */
