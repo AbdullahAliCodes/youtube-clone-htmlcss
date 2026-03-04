@@ -1,5 +1,12 @@
 /* 4 videos & full sidebar */
 
+/* Wide viewport: cap search middle so the bar stays centered (above 4-video breakpoint) */
+@media (min-width: 1992px) {
+    .search-area-middle {
+        max-width: 900px;
+    }
+}
+
 /* 3 videos */
 @media (max-width: 1991px) {
     .search-area-middle {
@@ -33,6 +40,14 @@
         display: flex;
         flex-direction: column;
         padding: 4px 4px 0 4px;
+        width: 0;
+        min-width: 0;
+        overflow: hidden;
+        flex-shrink: 0;
+        transition: width 0.3s ease;
+    }
+    #sidebar-toggle:checked ~ .menu-sidebar-small {
+        width: 72px;
     }
     .sml-menu-icons{
         height: 44px;

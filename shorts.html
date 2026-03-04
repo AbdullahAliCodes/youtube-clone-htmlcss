@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shorts.css">
+    <title>Shorts - YouTube</title>
+</head>
+<body class="shorts-page">
+    <!-- Top controls: Search, Camera, Profile -->
+    <header class="shorts-top-bar">
+        <a href="index.html" class="shorts-back" aria-label="Back">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path></svg>
+        </a>
+        <span class="shorts-title">Shorts</span>
+        <div class="shorts-top-actions">
+            <button type="button" class="shorts-top-icon" aria-label="Search">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
+            </button>
+            <button type="button" class="shorts-top-icon" aria-label="Create">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h13c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"></path></svg>
+            </button>
+            <a href="channel.html" class="shorts-top-profile" aria-label="Profile">
+                <img src="./resources/channel-dps/my-channel-dp.jpg" alt="">
+            </a>
+        </div>
+    </header>
+
+    <!-- Main: up arrow, viewing area, down arrow -->
+    <main class="shorts-main">
+        <button type="button" class="short-arrow short-arrow-up" aria-label="Previous reel" title="Previous">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path></svg>
+        </button>
+
+        <div class="shorts-viewing-area">
+            <div class="shorts-container" id="shorts-container">
+                <article class="short-card">
+                    <div class="short-video-area">
+                        <img src="https://picsum.photos/id/10/432/768" alt="">
+                    </div>
+                    <aside class="short-actions">
+                        <div class="short-action-item">
+                            <span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg></span>
+                            <span class="short-action-count">18K</span>
+                        </div>
+                        <div class="short-action-item">
+                            <span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.58-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4v-2h-2V5h-2z"></path></svg></span>
+                            <span class="short-action-count">Dislike</span>
+                        </div>
+                        <div class="short-action-item">
+                            <span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path></svg></span>
+                            <span class="short-action-count">3,635</span>
+                        </div>
+                        <div class="short-action-item">
+                            <span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg></span>
+                            <span class="short-action-count">Share</span>
+                        </div>
+                        <div class="short-action-item">
+                            <span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path></svg></span>
+                            <span class="short-action-count">Remix</span>
+                        </div>
+                        <div class="short-action-item short-action-channel">
+                            <img class="short-channel-avatar" src="./resources/channel-dps/channel-1-dp.jpg" alt="">
+                        </div>
+                    </aside>
+                    <div class="short-info-bar">
+                        <div class="short-info-top">
+                            <img class="short-info-avatar" src="./resources/channel-dps/channel-1-dp.jpg" alt="">
+                            <span class="short-info-handle">@GoblinOfLaughs</span>
+                            <button type="button" class="short-subscribe-btn">Subscribe</button>
+                        </div>
+                        <p class="short-info-title">Her gift is the real trump card #shorts</p>
+                    </div>
+                </article>
+
+                <article class="short-card">
+                    <div class="short-video-area">
+                        <img src="https://picsum.photos/id/20/432/768" alt="">
+                    </div>
+                    <aside class="short-actions">
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg></span><span class="short-action-count">332K</span></div>
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.58-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4v-2h-2V5h-2z"></path></svg></span><span class="short-action-count">Dislike</span></div>
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path></svg></span><span class="short-action-count">2,890</span></div>
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg></span><span class="short-action-count">Share</span></div>
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path></svg></span><span class="short-action-count">Remix</span></div>
+                        <div class="short-action-item short-action-channel"><img class="short-channel-avatar" src="./resources/channel-dps/channel-2-dp.jpg" alt=""></div>
+                    </aside>
+                    <div class="short-info-bar">
+                        <div class="short-info-top">
+                            <img class="short-info-avatar" src="./resources/channel-dps/channel-2-dp.jpg" alt="">
+                            <span class="short-info-handle">@kishangamerz811</span>
+                            <button type="button" class="short-subscribe-btn">Subscribe</button>
+                        </div>
+                        <p class="short-info-title">Terrible company #shorts</p>
+                    </div>
+                </article>
+
+                <article class="short-card">
+                    <div class="short-video-area">
+                        <img src="https://picsum.photos/id/28/432/768" alt="">
+                    </div>
+                    <aside class="short-actions">
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"></path></svg></span><span class="short-action-count">52K</span></div>
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.58-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4v-2h-2V5h-2z"></path></svg></span><span class="short-action-count">Dislike</span></div>
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"></path></svg></span><span class="short-action-count">1,204</span></div>
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"></path></svg></span><span class="short-action-count">Share</span></div>
+                        <div class="short-action-item"><span class="short-action-icon"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path></svg></span><span class="short-action-count">Remix</span></div>
+                        <div class="short-action-item short-action-channel"><img class="short-channel-avatar" src="./resources/channel-dps/channel-3-dp.jpg" alt=""></div>
+                    </aside>
+                    <div class="short-info-bar">
+                        <div class="short-info-top">
+                            <img class="short-info-avatar" src="./resources/channel-dps/channel-3-dp.jpg" alt="">
+                            <span class="short-info-handle">@TechReviews</span>
+                            <button type="button" class="short-subscribe-btn">Subscribe</button>
+                        </div>
+                        <p class="short-info-title">Best laptops of 2026 #shorts</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <button type="button" class="short-arrow short-arrow-down" aria-label="Next reel" title="Next">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg>
+        </button>
+    </main>
+
+    <script>
+        (function () {
+            var container = document.getElementById('shorts-container');
+            var up = document.querySelector('.short-arrow-up');
+            var down = document.querySelector('.short-arrow-down');
+            if (!container || !up || !down) return;
+            var cardHeight = container.querySelector('.short-card').offsetHeight;
+            up.addEventListener('click', function () {
+                container.scrollBy({ top: -cardHeight, behavior: 'smooth' });
+            });
+            down.addEventListener('click', function () {
+                container.scrollBy({ top: cardHeight, behavior: 'smooth' });
+            });
+        })();
+    </script>
+</body>
+</html>
