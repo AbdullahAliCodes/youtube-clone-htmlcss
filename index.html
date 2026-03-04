@@ -219,6 +219,11 @@
 
     <!-- Main Area -->
     <main>
+        <!-- Category filter (CSS radio hack) - must be siblings to content for ~ selector -->
+        <input type="radio" name="category-filter" id="filter-all" class="category-filter-input" checked aria-hidden="true">
+        <input type="radio" name="category-filter" id="filter-coding" class="category-filter-input" aria-hidden="true">
+        <input type="radio" name="category-filter" id="filter-gaming" class="category-filter-input" aria-hidden="true">
+        <input type="radio" name="category-filter" id="filter-music" class="category-filter-input" aria-hidden="true">
         <input type="checkbox" id="sidebar-toggle" class="sidebar-toggle-input" aria-hidden="true">
 
         <!-- Menu Sidebar Large -->
@@ -596,64 +601,24 @@
 
         <!-- Video Section -->
         <section class="main-area-right">
-            <!-- Category Section That Scrolls -->
+            <!-- Category pills (labels for radio hack) -->
             <div class="categories-bar-wrapper">
-            <section class="scroll-container">
-                <div class="categories">
-                    <div>
-                        <button class="category-btn-active"><span>All</span></button>
+                <section class="scroll-container">
+                    <div class="category-pills-row">
+                        <label for="filter-all" class="category-pill">All</label>
+                        <label for="filter-coding" class="category-pill">Coding</label>
+                        <label for="filter-gaming" class="category-pill">Gaming</label>
+                        <label for="filter-music" class="category-pill">Music</label>
+                        <span class="category-pill category-pill-dummy">Podcasts</span>
+                        <span class="category-pill category-pill-dummy">Cars</span>
+                        <span class="category-pill category-pill-dummy">Software Development</span>
+                        <span class="category-pill category-pill-dummy">AI</span>
+                        <span class="category-pill category-pill-dummy">JavaScript</span>
+                        <span class="category-pill category-pill-dummy">Live</span>
+                        <span class="category-pill category-pill-dummy">3D Printing</span>
+                        <span class="category-pill category-pill-dummy">Stop Motion</span>
                     </div>
-                    <div>
-                        <button class="category-btns"><span>Gaming</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>Podcasts</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>Cars</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>Toy Story 2</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>Software Development</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>AI</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>OpTic Gaming</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>3D Printer</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>JavaScript</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>Stop Motion</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>Software Development</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>AI</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>OpTic Gaming</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>3D Printer</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>JavaScript</span></button>
-                    </div>
-                    <div>
-                        <button class="category-btns"><span>Stop Motion</span></button>
-                    </div>
-                </div>
-            </section>
-                <!-- Category Arrows (left & right) - fixed to wrapper edges -->
+                </section>
                 <div class="arrows">
                     <div class="arrow-container right-arrow-container">
                         <div class="arrow">
@@ -668,9 +633,9 @@
                 </div>
             </div>
             <!-- YouTube Video Feed Section -->
-            <section class="videos-section">
+            <section class="videos-section video-grid">
                 <!-- Video 1 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-1.avif" alt="Intro to Agent Skills">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/skill.gif" alt="">
@@ -700,7 +665,7 @@
                     </div>
                 </div>
                 <!-- Video 2 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-2.avif" alt="How to become a Software Engineer in 2026">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/coding.gif" alt="">
@@ -730,7 +695,7 @@
                     </div>
                 </div>
                 <!-- Video 3 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-3.avif" alt="First week in my Software Engineering Job">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/work.gif" alt="">
@@ -760,7 +725,7 @@
                     </div>
                 </div>
                 <!-- Video 4 -->
-                <div class="video">
+                <div class="video vid-music">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-4.avif" alt="This Is What True Healing Looks Like">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/panda.gif" alt="">
@@ -790,7 +755,7 @@
                     </div>
                 </div>
                 <!-- Video 5 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-5.avif" alt="Claude Code for Beginners - Creating your first website">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/claude.gif" alt="">
@@ -820,7 +785,7 @@
                     </div>
                 </div>
                 <!-- Video 6 -->
-                <div class="video">
+                <div class="video vid-music">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-6.avif" alt="we stopped remembering. our phones did">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/1.gif" alt="">
@@ -850,7 +815,7 @@
                     </div>
                 </div>
                 <!-- Video 7 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-7.avif" alt="React Tutorial Full Course - Beginner to Pro">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/react.gif" alt="">
@@ -880,7 +845,7 @@
                     </div>
                 </div>
                 <!-- Video 8 -->
-                <div class="video">
+                <div class="video vid-gaming">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-8.avif" alt="How One MISTAKE Destroyed Game">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/game.gif" alt="">
@@ -910,7 +875,7 @@
                     </div>
                 </div>
                 <!-- Video 9 -->
-                <div class="video">
+                <div class="video vid-music">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-9.avif" alt="What If It Works Out?">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/success.gif" alt="">
@@ -940,7 +905,7 @@
                     </div>
                 </div>   
                 <!-- Video 10 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-10.avif" alt="he needed my giant keyboard... can I fix it in time?">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/keyboard.avif" alt="">
@@ -970,7 +935,7 @@
                     </div>
                 </div>     
                 <!-- Video 11 -->
-                <div class="video">
+                <div class="video vid-gaming">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-11.avif" alt="OpticTexas vs VancouverSurge Major II Qualifiers">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/cod.gif" alt="">
@@ -1000,7 +965,7 @@
                     </div>
                 </div>   
                 <!-- Video 12 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-12.avif" alt="How to Build a Better World Through Your Job">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/adamsavage.webp" alt="">
@@ -1030,7 +995,7 @@
                     </div>
                 </div>       
                 <!-- Video 13 -->
-                <div class="video">
+                <div class="video vid-gaming">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-13.avif" alt="Comparing Every Version of Toy Story 3: The Game">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/toystory.webp" alt="">
@@ -1060,7 +1025,7 @@
                     </div>
                 </div>      
                 <!-- Video 14 -->
-                <div class="video">
+                <div class="video vid-music">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-14.avif" alt="founder mode dark ambient for building at 3am">
                         <img class="thumbnail-img thumbnail-preview" src="/resources/video-thumbnails/yt-thumbnail-14.avif" alt="">
@@ -1090,7 +1055,7 @@
                     </div>
                 </div>  
                 <!-- Video 15 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-15.avif" alt="I connected Claude AI to Blender 3D Mind-Blowing Results">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/blender.gif" alt="">
@@ -1120,7 +1085,7 @@
                     </div>
                 </div>    
                 <!-- Video 16 -->
-                <div class="video">
+                <div class="video vid-gaming">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-16.avif" alt="Logitech X2 Superstrike">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/mouse.gif" alt="">
@@ -1150,7 +1115,7 @@
                     </div>
                 </div> 
                 <!-- Video 17 -->
-                <div class="video">
+                <div class="video vid-gaming">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-17.avif" alt="The Story of Max Verstappen">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/max.gif" alt="">
@@ -1180,7 +1145,7 @@
                     </div>
                 </div> 
                 <!-- Video 18 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-18.avif" alt="My First Line of Code: Linus Torvalds">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/linus.gif" alt="">
@@ -1210,7 +1175,7 @@
                     </div>
                 </div>
                 <!-- Video 19 -->
-                <div class="video">
+                <div class="video vid-coding">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-19.avif" alt="The Only Upgrade Order That Makes Sense">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/gaming.webp" alt="">
@@ -1240,7 +1205,7 @@
                     </div>
                 </div> 
                 <!-- Video 20 -->
-                <div class="video">
+                <div class="video vid-music">
                     <div class="video-thumbnail">
                         <img class="thumbnail-img thumbnail-static" src="./resources/video-thumbnails/yt-thumbnail-20.avif" alt="I've owned over 1000 bags. These are my favorites.">
                         <img class="thumbnail-img thumbnail-preview" src="./resources/gifs/bag.webp" alt="">

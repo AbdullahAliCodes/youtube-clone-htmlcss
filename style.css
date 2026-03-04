@@ -612,6 +612,9 @@ main {
     height: 0;
     opacity: 0;
     pointer-events: none;
+}
+.category-filter-input {
+    display: none;
     margin: 0;
 }
 
@@ -858,46 +861,42 @@ footer {
 .arrow {
     width: 24px;
 }
-.categories {
+/* Category pills row (labels for radio hack) */
+.category-pills-row {
     display: flex;
     align-items: center;
-    padding-left: 12px;
+    gap: 0;
+    padding: 12px 12px 12px 12px;
     min-height: 56px;
 }
-
-/* CATEGORY BUTTONS | TOP SCROLL BAR */
-.category-btn-active {
-    background-color: var(--category-active-bg);
-    color: var(--category-active-text);
-    height: 32px;
-    padding: 0 12px;
-    margin: 12px 12px 12px 0;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border: none;
-    font-size: 14px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-.category-btns {
+.category-pill {
     background-color: var(--category-inactive-bg);
     color: var(--category-inactive-text);
     height: 32px;
     padding: 0 12px;
-    margin: 12px 12px 12px 0;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    margin-right: 12px;
+    border-radius: 8px;
     border: none;
     font-size: 14px;
     font-weight: 500;
     white-space: nowrap;
-}
-.category-btns:hover {
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+.category-pill-dummy {
+    cursor: pointer;
+}
+/* Active pill: when corresponding radio is checked */
+#filter-all:checked ~ .main-area-right label[for="filter-all"],
+#filter-coding:checked ~ .main-area-right label[for="filter-coding"],
+#filter-gaming:checked ~ .main-area-right label[for="filter-gaming"],
+#filter-music:checked ~ .main-area-right label[for="filter-music"] {
+    background-color: var(--category-active-bg);
+    color: var(--category-active-text);
+    font-weight: 600;
 }
 
 /* YOUTUBE VIDEO FEED SECTION */
@@ -907,6 +906,13 @@ footer {
     gap: 8px;
     padding: 20px 12px;
     grid-template-columns: repeat(4, 1fr);
+}
+
+/* Category filter (CSS radio hack): hide non-matching videos when a filter is selected */
+#filter-coding:checked ~ .main-area-right .videos-section .video:not(.vid-coding),
+#filter-gaming:checked ~ .main-area-right .videos-section .video:not(.vid-gaming),
+#filter-music:checked ~ .main-area-right .videos-section .video:not(.vid-music) {
+    display: none;
 }
 
 /* INDIVIDUAL VIDEO */
